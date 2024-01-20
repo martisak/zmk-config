@@ -18,5 +18,7 @@
 #
 ---
 include:
-  - board: skoldpad_left
-  - board: skoldpad_right
+  - board: nice_nano_v2
+    shield: skoldpad_left
+  - board: nice_nano_v2
+    shield: skoldpad_right
