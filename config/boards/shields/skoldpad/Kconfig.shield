@@ -1,0 +1,5 @@
+config SHIELD_SKOLDPAD_LEFT
+    def_bool $(shields_list_contains,skoldpad_left)
+
+config SHIELD_SKOLDPAD_RIGHT
+    def_bool $(shields_list_contains,skoldpad_right)

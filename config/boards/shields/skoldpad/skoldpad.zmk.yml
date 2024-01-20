@@ -1,0 +1,12 @@
+file_format: "1"
+id: skoldpad
+name: Skoldpad
+type: shield
+url: https://github.com/martisak/skoldpad
+requires: [pro_micro]
+features:
+  - keys
+  - encoder
+siblings:
+  - skoldpad_left
+  - skoldpad_right

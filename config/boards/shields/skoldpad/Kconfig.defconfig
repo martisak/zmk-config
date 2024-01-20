@@ -1,0 +1,16 @@
+if SHIELD_SKOLDPAD_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Skoldpad"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_SKOLDPAD_LEFT || SHIELD_SKOLDPAD_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
