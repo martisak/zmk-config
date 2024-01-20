@@ -1,25 +1,15 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
+//#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-
-#define COLEMAK 0
-#define QWERTY 1
-#define WASD 2
-#define SYM 3
-#define NAV 4
-#define ADJUST 5
-
-// tapdance timing
-#define TAPTERM 100
+//#include <dt-bindings/zmk/outputs.h>
 
 / {
 
     keymap {
         compatible = "zmk,keymap";
 
-        qwerty_layer {
-            label = "QWERTY";
+        default_layer {
+            //label = "QWERTY";
             bindings = <
         &trans   &kp Q   &kp W   &kp E   &kp R   &kp T                     &kp Y   &kp U  &kp I  &kp O   &kp P  &trans
         &trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &kp H   &kp J  &kp K  &kp L  &kp SEMI  &trans  
