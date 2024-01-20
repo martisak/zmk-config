@@ -1,7 +1,10 @@
 #include <behaviors.dtsi>
-//#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-//#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define QWERTY 0
+#define NUM 1
 
 / {
 
@@ -11,10 +14,22 @@
         default_layer {
             //label = "QWERTY";
             bindings = <
-        &trans   &kp Q   &kp W   &kp E   &kp R   &kp T                     &kp Y   &kp U  &kp I  &kp O   &kp P  &trans
-        &trans   &kp A   &kp S   &kp D   &kp F   &kp G                     &kp H   &kp J  &kp K  &kp L  &kp SEMI  &trans  
-        &trans   &kp Z   &kp X   &kp C   &kp V   &kp B                     &kp N   &kp M  &kp COMMA  &kp DOT  &trans  &trans
-                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans &trans &trans
+        &kp TAB         &kp Q   &kp W   &kp E   &kp R   &kp T                     &kp Y   &kp U  &kp I  &kp O   &kp P  &trans
+        &kp ESC         &kp A   &kp S   &kp D   &kp F   &kp G                     &kp H   &kp J  &kp K  &kp L  &kp SEMI  &trans  
+        &mt LSHFT LBRC  &kp Z   &kp X   &kp C   &kp V   &kp B                     &kp N   &kp M  &kp COMMA  &kp DOT  &trans  &trans
+                        &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &kp SPACE  &mo NUM                    &trans  &trans  &trans &trans &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+        };
+
+        num_layer {
+            //label = "QWERTY";
+            bindings = <
+        &out OUT_TOG    &kp N7   &kp N8   &kp N9   &trans   &trans                    &kp Y   &kp U  &kp I  &kp O   &kp P  &trans
+        &trans          &kp N4   &kp N5   &kp N6   &trans   &trans                    &kp H   &kp J  &kp K  &kp L  &kp SEMI  &trans  
+        &trans          &kp N1   &kp N2   &kp N3   &trans   &trans                    &kp N   &kp M  &kp COMMA  &kp DOT  &trans  &trans
+                        &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &kp SPACE  &trans                    &trans  &trans  &trans &trans &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
