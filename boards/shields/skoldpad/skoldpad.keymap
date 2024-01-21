@@ -20,7 +20,7 @@
                         &kp LCTRL  &kp LALT  &kp LEFT_COMMAND &kp SPACE  &mo NUM                    &trans  &trans  &trans &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp &kp LS(LA(C_VOL_DN)) &kp LS(LA(C_VOL_UP)) &inc_dec_kp PG_DN PG_UP>;
         };
 
         num_layer {
