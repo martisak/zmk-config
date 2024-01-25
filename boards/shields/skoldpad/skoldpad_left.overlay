@@ -21,9 +21,7 @@
         , <&pro_micro 16 GPIO_ACTIVE_HIGH>  // ROW 5 (inner)
         , <&pro_micro 6 GPIO_ACTIVE_HIGH>  // ROW 6 (middle thumb)
         , <&pro_micro 18 GPIO_ACTIVE_HIGH>  // ROW 6 (outer thumb)
-        ; 
-};
-
+        
 &encoder_left {
     status = "okay";
 };
