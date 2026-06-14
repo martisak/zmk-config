@@ -1,8 +1,0 @@
-[project]
-name = "zmk-config"
-version = "0.1.0"
-requires-python = ">=3.12"
-dependencies = [
-    "adafruit-nrfutil>=0.5.3.post16",
-    "intelhex>=2.3.0",
-]

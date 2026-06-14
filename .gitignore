@@ -1,0 +1,16 @@
+# Build outputs
+firmware/
+*.uf2
+*.hex
+*.bin
+*_dfu.zip
+
+# Local flashing tooling
+uf2conv.py
+uf2families.json
+
+# Python / uv environment
+.venv/
+pyproject.toml
+uv.lock
+__pycache__/
