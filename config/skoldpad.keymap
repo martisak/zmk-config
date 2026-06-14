@@ -5,17 +5,22 @@
 
 #define QWERTY 0
 #define NUM 1
+#define FUNC 2
+#define DIR 3
+
+// Symbol bindings for a macOS Swedish OS keyboard layout.
+// ZMK emits US HID positions; macOS (set to Swedish) reinterprets them.
+// å ä ö are produced directly on the base layer by the [ ; ' positions.
+#define SWE_AT    RA(N2)        // @  = Option+2
+#define SWE_DLLR  RA(N4)        // $  = Option+4
+#define SWE_PIPE  RA(N7)        // |  = Option+7
+#define SWE_BSLH  RA(LS(N7))    // \  = Shift+Option+7   (verify on device)
+#define SWE_LBKT  RA(N8)        // [  = Option+8
+#define SWE_RBKT  RA(N9)        // ]  = Option+9
+#define SWE_LBRC  RA(LS(N8))    // {  = Shift+Option+8
+#define SWE_RBRC  RA(LS(N9))    // }  = Shift+Option+9
 
 / {
-    macros {
-        swe_o: swe_o {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "SWE_O";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -38,9 +43,9 @@
             //label = "QWERTY";
 
             bindings = <
-&kp LESS_THAN         &kp GREATER_THAN  &kp EXCL       &kp AT_SIGN    &kp HASH         &kp DOLLAR                                              &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0     &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp PIPE              &kp EQUAL         &kp SLASH      &kp BACKSLASH  &kp QUESTION     &kp PERCENT                                             &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp NON_US_BACKSLASH  &kp K_COFFEE      &kp AMPERSAND  &kp CARET      &kp NON_US_HASH  &kp TILDE                                               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE  &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES
+&kp NON_US_BSLH       &kp LS(NON_US_BSLH)  &kp LS(N1)     &kp SWE_AT     &kp LS(N3)     &kp SWE_DLLR                                            &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0     &kp SWE_LBKT          &kp SWE_RBKT
+&kp SWE_PIPE          &kp LS(N0)           &kp LS(N7)     &kp SWE_BSLH   &kp LS(MINUS)  &kp LS(N5)                                              &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SWE_LBRC     &kp LS(N8)            &kp LS(N9)
+&kp NON_US_BACKSLASH  &kp K_COFFEE         &kp LS(N6)     &kp CARET      &kp NON_US_HASH &kp TILDE                                              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SWE_RBRC     &kp BACKSLASH         &kp LS(N2)
                                         &trans         &trans                          &trans       &kp SPACE  &trans  &trans  &trans  &trans                &trans        &trans
             >;
 
