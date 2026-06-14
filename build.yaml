@@ -24,7 +24,3 @@ include:
     shield: skoldpad_right
   - board: nice_nano//zmk
     shield: settings_reset
-  - board: nice_nano//zmk
-    shield: skoldpad_left
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
-    artifact-name: corne_left_with_logging
